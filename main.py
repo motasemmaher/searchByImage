@@ -2,10 +2,10 @@ from typing import Optional
 from pydantic import BaseModel
 from fastapi import FastAPI, File, UploadFile
 import PIL.Image as Image
-import os
 from Train import startTrain
 from LoadTest import getNameIamge
 from fastapi.middleware.cors import CORSMiddleware
+import os
 
 app = FastAPI()
 
