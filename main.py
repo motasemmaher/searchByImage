@@ -5,9 +5,22 @@ import PIL.Image as Image
 import os
 from Train import startTrain
 from LoadTest import getNameIamge
+from fastapi.middleware.cors import CORSMiddleware
 
 app = FastAPI()
 
+origins = [
+    "http://localhost:3000",
+    "http://localhost:8100",
+]
+
+app.add_middleware(
+    CORSMiddleware,
+    allow_origins=origins,
+    allow_credentials=True,
+    allow_methods=["*"],
+    allow_headers=["*"],
+)
 
 @app.post("/start-training")
 def read_root():
