@@ -34,11 +34,6 @@ def prepareDataset():
                 training_data.append([new_array, class_num])  # add this to our training_data
             except Exception as e:  # in the interest in keeping the output clean...
                 pass
-            # except OSError as e:
-            #    print("OSErrroBad img most likely", e, os.path.join(path,img))
-            # except Exception as e:
-            #    print("general exception", e, os.path.join(path,img))
-
   create_training_data()
   X = []
   y = []
@@ -47,10 +42,8 @@ def prepareDataset():
       X.append(features)
       y.append(label)
 
-
   X = np.array(X).reshape(-1, IMG_SIZE, IMG_SIZE, 1)
 
-  # Save dataset
   pickle_out = open("XS.pickle", "wb")
   pickle.dump(X, pickle_out)
   pickle_out.close()
@@ -59,12 +52,6 @@ def prepareDataset():
   pickle.dump(y, pickle_out)
   pickle_out.close()
 
-  # load dataset
-  # pickle_in = open("X.pickle", "rb")
-  # X = pickle.load(pickle_in)
-  #
-  # pickle_in = open("y.pickle", "rb")
-  # y = pickle.load(pickle_in)
 
 
 

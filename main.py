@@ -27,14 +27,17 @@ def read_root():
     startTrain()
     return {"finshed": True}
 
+class ImageReader(BaseModel):
+  img: str
 
-@app.get('/get-image-name/{name}')
-def getImageName(name: str, img: bytes = File(...)):
-    return {"name": getNameIamge(img, name)}
+@app.post('/get-image-name/{name}')
+def getImageName(name: str, img: ImageReader):
+  print('asddsadsadds')
+  return {"name": getNameIamge(img, name)}
 
 
 @app.post('/add-image/{category_name}/{name}')
-def addImage(category_name: str, name: str, img: bytes = File(...)):
+def addImage(category_name: str, name: str, img: ImageReader):
     directoryName = f'images/{category_name}'
     if not os.path.exists(directoryName):
         os.mkdir(directoryName)
