@@ -34,6 +34,7 @@ def getNameIamge(img, name):
     img_array = cv2.imread(path, cv2.IMREAD_GRAYSCALE)
     new_array = cv2.resize(img_array, (70, 70))
     new_image = new_array.reshape(-1, 70, 70, 1)
+    print(new_image)
     predictions = cnn.predict(new_image)
     num = np.argmax(predictions)
     os.remove(path)
