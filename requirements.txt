@@ -105,9 +105,7 @@ pyparsing==2.4.7
 pyRFC3339==1.1
 pyrsistent==0.16.0
 pytest==6.1.1
-python-apt==2.0.0
 python-dateutil==2.7.3
-python-debian===0.1.36
 python-dotenv==0.15.0
 python-multipart==0.0.5
 pytz==2019.3
