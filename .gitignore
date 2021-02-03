@@ -154,7 +154,6 @@ vignettes/*.pdf
 ### VisualStudioCode Patch ###
 # Ignore all local history of files
 .history
-images
 XS.pickle
 ys.pickle
 saved_model.pb

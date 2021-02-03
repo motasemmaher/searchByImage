@@ -28,7 +28,7 @@ app.add_middleware(
     allow_headers=["*"],
 )
 
-@app.post("/start-training")
+@app.get("/start-training")
 def read_root():
   startTrain()
   return {"finshed": True}
