@@ -1,7 +1,6 @@
 # This file may be used to create an environment using:
 # $ conda create --name <env> --file <this file>
 # platform: win-64
-_tflow_select=2.2.0=eigen
 fastapi==0.63.0
 fasteners==0.14.1
 absl-py=0.11.0=py37haa95532_0
