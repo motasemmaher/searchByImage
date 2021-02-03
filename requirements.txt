@@ -120,7 +120,6 @@ requests-unixsocket==0.2.0
 rsa==4.6
 scikit-image==0.17.2
 scipy==1.4.1
-screen-resolution-extra==0.0.0
 SecretStorage==2.3.1
 Send2Trash==1.5.0
 simplejson==3.16.0
