@@ -140,8 +140,6 @@ tornado==6.0.4
 traitlets==4.3.3
 typing-extensions==3.7.4.3
 tzlocal==2.1
-ubuntu-advantage-tools==20.3
-ubuntu-drivers-common==0.0.0
 ufw==0.36
 unattended-upgrades==0.1
 urllib3==1.25.8
