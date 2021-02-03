@@ -18,6 +18,7 @@ app = FastAPI()
 origins = [
     "http://localhost:3000",
     "http://localhost:8100",
+    "https://b2b-stg.herokuapp.com/"
 ]
 
 app.add_middleware(
