@@ -8,12 +8,16 @@ from fastapi.middleware.cors import CORSMiddleware
 import os
 from tensorflow.compat.v1 import ConfigProto
 from tensorflow.compat.v1 import InteractiveSession
+import uvicorn
 
 config = ConfigProto()
 config.gpu_options.allow_growth = True
 session = InteractiveSession(config=config)
 
-app = FastAPI()
+app = FastAPI(docs_url=None,redoc_url=None)
+
+if __name__ == "__main__":
+    uvicorn.run(app, host='0.0.0.0')
 
 origins = [
     "http://localhost:3000",
